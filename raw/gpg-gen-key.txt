@@ -1,0 +1,70 @@
+timmc@curmudgeon:~$ gpg --gen-key
+gpg (GnuPG) 1.4.12; Copyright (C) 2012 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 
+Key does not expire at all
+Is this correct? (y/N) y
+
+You need a user ID to identify your key; the software constructs the user ID
+from the Real Name, Comment and Email Address in this form:
+    "Heinrich Heine (Der Dichter) <heinrichh@duesseldorf.de>"
+
+Real name: Jay Random Hacker
+Email address: jrh@example.net
+Comment: ?
+Please enter an optional comment
+Comment: personal
+You selected this USER-ID:
+    "Jay Random Hacker (personal) <jrh@example.net>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+You need a Passphrase to protect your secret key.
+
+gpg: gpg-agent is not available in this session
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+..........+++++
+........................+++++
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+Not enough random bytes available.  Please do some other work to give
+the OS a chance to collect more entropy! (Need 167 more bytes)
+..............+++++
+..+++++
+gpg: key D1E22A2F marked as ultimately trusted
+public and secret key created and signed.
+
+gpg: checking the trustdb
+gpg: 3 marginal(s) needed, 1 complete(s) needed, classic trust model
+gpg: depth: 0  valid:   6  signed:   5  trust: 0-, 0q, 0n, 0m, 0f, 6u
+gpg: depth: 1  valid:   5  signed:   8  trust: 4-, 0q, 0n, 0m, 1f, 0u
+gpg: depth: 2  valid:   2  signed:  15  trust: 2-, 0q, 0n, 0m, 0f, 0u
+gpg: next trustdb check due at 2013-09-16
+pub   4096R/D1E22A2F 2013-06-13
+      Key fingerprint = C088 55AC 63AD 5113 E444  8FF1 07E7 A86A D1E2 2A2F
+uid                  Jay Random Hacker (personal) <jrh@example.net>
+sub   4096R/1C616145 2013-06-13
+
+timmc@curmudgeon:~$ 
