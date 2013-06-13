@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<h1>Personal cryptography can be easy!</h1>
+
+<p>
+All you need is a keypair and some friends who will humor you.
+</p>
+
+<p>
+[Sidebar: PGP is a commercial product;
+GPG is a free-licensed product that is compatible with it.]
+</p>
+
+<p>
+You'll probably even be able to use the same programs
+you always have!
+Just look for "PGP" (or "GPG") support.
+If your browser or mail client doesn't support them natively,
+there's almost always an extension or add-on you can install.
+Even without that, *anything that supports plain text*
+will support PGP.
+</p>
+
+<h2>Let's get you set up with a keypair</h2>
+
+<p>
+[Sidebar: A "keypair" is a pair of files, one containing a private key
+and one containing a public key.
+You keep the former secret
+and share the latter with everyone who wants to communicate with you.]
+</p>
+
+<h3>What you'll need</h3>
+
+<ul>
+  <li><b>A kickass passphrase</b>:
+    This is like a password, only more serious
+    and *not used anywhere else, ever*.
+    My recommendation is to hammer on the keyboard a bit, hitting shift
+    occasionally, then write that down on a piece of paper.
+    20-30 characters is a good length, as long as you stay away
+    from dictionary words and numbers that other people might guess.
+    Burn the paper once you're sure you've memorized the password.
+    (You could also hide it in the woods or something, I guess.) [1]
+
+    [1] What's your threat model? If you're more concerned about losing the
+    passphrase than you are about the government getting a search warrant,
+    then putting it in your safe-deposit box might be reasonable.
+  </li>
+  <li><b>A local app</b> that will generate the keypair for you.
+    *Never rely on a web site to do this for you.*
+    Your keys *must* be generated and stored on hardware you control.
+  </li>
+</ul>
+
+<h3>Configuration</h3>
+
+<p>
+The program will ask you some questions. Here's a cheat-sheet.
+</p>
+
+<h4>User ID</h4>
+
+<p>
+In PGP-land, keys have a "user ID" --
+just a piece of information identifying who owns the key.
+A key can have more than one of these.
+</p>
+
+<dl>
+  <dt>"Full name"</dt>
+  <dd>Something that is reasonably appropriate for identifying you.
+    This doesn't need to be your legal name!
+    For some people, and for some uses, that's
+    "Alfred Wilhelm Uppington III".
+    If you're a world-famous programmer or a superhero,
+    it might be "_why" or "Batman" or some other pseudonym.
+    In any event, keep it professional and useful.
+  </dd>
+  <dt>Email address</dt>
+  <dd>When people send you encrypted mail with this key,
+    what email address should they use? This one!
+    This field helps other people's email programs
+    find <em>your</em> public key.
+    If you don't want your email ending up in the hands of spammers,
+    don't send your key to a public keyserver
+    (but the spammers probably already have your address anyway.)  
+  </dd>
+  <dt>Comment</dt>
+  <dd>Up to you! I use this for describing the purpose
+    of the email address, e.g. "work topics only".
+  </dd>
+</dl>
+
+<h4>Crypto crap</h4>
+
+<p>
+When you're asked for an encryption method and a key size,
+pick RSA (or DSA + Elgamal)
+and the biggest number available (probably 4096).
+Bigger key sizes will be stronger,
+but can be a little bulkier or take a little longer to use.
+</p>
+
+<p>
+Set the key to never expire.
+</p>
+
+### What to expect
+
+<p>
+You'll be asked for a user ID,
+and then for your awesome, complicated passphrase,
+and then you'll wait for a minute or two
+while your computer gathers enough randomness
+to construct a really good keypair for you.
+</p>
+
+<p>
+Don't just sit there and stare at the progress bar;
+use your computer as usual.
+It uses your keyboard and mouse activity
+to help it generate good random numbers.
+</p>
+
+<h3>Pick an app</h3>
+
+<h4>Linux: Seahorse</h4>
+
+<p>
+If you use Ubuntu Linux (a very common distro),
+you should already have Seahorse installed.
+Find it under `Preferences -> Passwords and Keys`.
+</p>
+
+<ol>
+  <li>Make a new key: `File -> New... -> PGP Key`</li>
+  <li>Export your public key: `File -> Export...`
+    and make sure to select "Armored PGP Keys" from the dropdown.
+    [glossary item]</li>
+  <li>Email that to your friends! [Footnote: They can't trust it's yours,
+    but this is a way of getting it to them without
+    exposing your email address to spammers.]</li>
+</ol>
+
+<h2>Pitfalls</h2>
+
+<ul>
+  <li>Make sure you have "also encrypt to self" turned on
+    when encrypting messages to other people,
+    otherwise you won't be able to read what you sent!
+  </li>
+  <li>Many email programs can't search inside encrypted messages.</li>
+</ul>
+
+</body>
+</html>
