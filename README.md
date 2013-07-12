@@ -30,6 +30,14 @@ Work to be done:
   - Key signing
   - Conceptual overview (*very* high level)
   - Glossary
+  - Pitfalls
+
+- Backing up private key
+  - This doesn't work: gpg --symmetric --armor <(gpg --export-secret-keys --armor )
+  - "could not open MIME-encoded message" -- just open from a text editor
+- encrypt to self
+
+"There is a small security glitch in the OpenPGP (and therefore GnuPG) system; to avoid this you should always sign and encrypt a message instead of only encrypting it."
 
 ## License
 

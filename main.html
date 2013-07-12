@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head><title>EZ Crypto</title></head>
 <body>
 
 <h1>Personal cryptography can be easy!</h1>
@@ -24,13 +24,22 @@ Even without that, *anything that supports plain text*
 will support PGP.
 </p>
 
+<p>Here's what we're going to do:</p>
+
+<ol>
+  <li>Generate a keypair</li>
+  <li>Give it to your friends</li>
+  <li>Sign your friends' keys</li>
+  <li>Start signing and encrypting messages</li>
+</ol>
+
 <h2>Let's get you set up with a keypair</h2>
 
 <p>
 [Sidebar: A "keypair" is a pair of files, one containing a private key
 and one containing a public key.
-You keep the former secret
-and share the latter with everyone who wants to communicate with you.]
+You keep the private key secret
+and share the public key with everyone who wants to communicate with you.]
 </p>
 
 <h3>What you'll need</h3>
@@ -38,7 +47,7 @@ and share the latter with everyone who wants to communicate with you.]
 <ul>
   <li><b>A kickass passphrase</b>:
     This is like a password, only more serious
-    and *not used anywhere else, ever*.
+    and *not used anywhere else*.
     My recommendation is to hammer on the keyboard a bit, hitting shift
     occasionally, then write that down on a piece of paper.
     20-30 characters is a good length, as long as you stay away
