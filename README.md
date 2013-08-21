@@ -75,15 +75,16 @@ Work to be done:
     for different operating systems oh my goodness
 - Content
   - Key generation
-  - Key distribution
   - Encryption and decryption
-  - Key signing
-  - Conceptual overview (*very* high level)
+  - Key distribution
   - Glossary
   - Pitfalls
+  - Key signing
+  - Conceptual overview (*very* high level)
 
 - Backing up private key
-  - This doesn't work: gpg --symmetric --armor <(gpg --export-secret-keys --armor )
+  - gpg --export-secret-keys | gpg --symmetric --sign --armor > private-keys.pw.gpg.txt
+    - signed with own public key
   - "could not open MIME-encoded message" -- just open from a text editor
 - encrypt to self
 
